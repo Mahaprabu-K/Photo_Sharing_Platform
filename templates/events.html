@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events - Platform</title>
+
+    <link rel="stylesheet" href="/static/css/events.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="topbar">
+
+            <div>
+                <div class="logo">
+                    Platform<strong>AI</strong>
+                </div>
+
+                <p class="page-label">ADMIN PANEL</p>
+            </div>
+
+            <a href="/admin" class="back-btn">
+                ← Dashboard
+            </a>
+
+        </header>
+
+
+        <main class="content">
+
+            <section class="page-heading">
+
+                <p>EVENT MANAGEMENT</p>
+
+                <h1>My Events</h1>
+
+                <span>
+                    View all photography events created by you.
+                </span>
+
+            </section>
+
+
+            <section id="eventList">
+
+                <div class="loading">
+                    Loading events...
+                </div>
+
+            </section>
+
+
+            <div class="create-event-area">
+
+                <a href="/create-event" class="create-btn">
+                    + Create New Event
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="/static/js/events.js"></script>
+
+</body>
+
+</html>

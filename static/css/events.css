@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.topbar {
+    background: #111;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo strong {
+    color: #d9a441;
+}
+
+.page-label {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #555;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.page-heading p {
+    color: #d9a441;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.page-heading h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.page-heading span {
+    color: #777;
+}
+
+#eventList {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.event-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.event-card h2 {
+    margin-bottom: 12px;
+}
+
+.event-card p {
+    color: #666;
+    margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+
+    .topbar {
+        padding: 18px 20px;
+    }
+
+    .content {
+        padding: 35px 20px;
+    }
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+}
+
+.create-event-area {
+    margin-top: 25px;
+}
+
+.create-btn {
+    display: inline-block;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.create-btn:hover {
+    background: #d9a441;
+    color: #111;
+}
+
+/* Delete Event Button */
+
+.delete-btn {
+    margin-top: 18px;
+    padding: 11px 18px;
+    border: 1px solid rgba(220, 70, 70, 0.35);
+    border-radius: 10px;
+    background: rgba(220, 70, 70, 0.08);
+    color: #e85d5d;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.delete-btn:hover {
+    background: #e85d5d;
+    color: #ffffff;
+    border-color: #e85d5d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 70, 70, 0.20);
+}
+
+.delete-btn:active {
+    transform: translateY(0);
+}

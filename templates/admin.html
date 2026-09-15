@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - PlatformAI</title>
+
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                📷 
+                <span>Platform</span><strong>AI</strong>
+            </div>
+
+            <p class="menu-title">ADMIN PANEL</p>
+
+            <a href="/admin" class="menu-item active">
+                🏠 Dashboard
+            </a>
+
+            <a href="/create-event" class="menu-item">
+                📅 Create Event
+            </a>
+
+            <a href="/events" class="menu-item">
+                📋 My Events
+            </a>
+
+            <a href="/team-management" class="menu-item">
+                👥 Team Management
+            </a>
+
+            <a href="/admin-photos" class="menu-item">
+                🖼️ Event Photos
+            </a>
+
+            <a href="/create-gallery" class="menu-item">
+                ✨ Create Gallery
+            </a>
+
+            <div class="sidebar-bottom">
+
+                <a href="/logout" class="logout">
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="welcome-small">Welcome back</p>
+                    <h1 id="userName">Loading...</h1>
+                </div>
+
+                <div class="profile">
+
+                    <div class="profile-icon">
+                        👤
+                    </div>
+
+                    <div>
+                        <span>Account</span>
+                        <strong id="userRole">Loading...</strong>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- HERO -->
+            <section class="hero-card">
+
+                <div>
+
+                    <p class="hero-label">
+                        PHOTO MANAGEMENT PLATFORM
+                    </p>
+
+                    <h2>
+                        Manage your photography
+                        <span>events</span> easily.
+                    </h2>
+
+                    <p>
+                        Create events, manage your team, review photos
+                        and publish beautiful customer galleries.
+                    </p>
+
+                </div>
+
+                <div class="camera-icon">
+                    📷
+                </div>
+
+            </section>
+
+
+            <!-- QUICK ACTIONS -->
+            <section class="section">
+
+                <div class="section-heading">
+                    <h2>Quick Actions</h2>
+                    <p>Manage your photo platform</p>
+                </div>
+
+
+                <div class="action-grid">
+
+                    <a href="/create-event" class="action-card">
+
+                        <div class="action-icon">
+                            📅
+                        </div>
+
+                        <h3>Create Event</h3>
+
+                        <p>
+                            Create a new photography event.
+                        </p>
+
+                    </a>
+
+
+                    <a href="/team-management" class="action-card">
+
+                        <div class="action-icon">
+                            👥
+                        </div>
+
+                        <h3>Manage Team</h3>
+
+                        <p>
+                            Assign team members to events.
+                        </p>
+
+                    </a>
+
+
+                    <a href="/admin-photos" class="action-card">
+
+                        <div class="action-icon">
+                            🖼️
+                        </div>
+
+                        <h3>Review Photos</h3>
+
+                        <p>
+                            View and select uploaded photos.
+                        </p>
+
+                    </a>
+
+
+                    <a href="/create-gallery" class="action-card">
+
+                        <div class="action-icon">
+                            ✨
+                        </div>
+
+                        <h3>Create Gallery</h3>
+
+                        <p>
+                            Create and publish customer galleries.
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="/static/js/admin.js"></script>
+
+</body>
+
+</html>

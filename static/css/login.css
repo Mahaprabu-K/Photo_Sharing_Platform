@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* Login Card */
+
+.login-card {
+    width: 420px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Logo */
+
+.logo {
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: #d99c30;
+
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    text-align: center;
+
+    font-size: 28px;
+    color: #222;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+/* Form */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #333;
+
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: #fafafa;
+}
+
+.form-group input:focus {
+    border-color: #f2b84b;
+
+    background: white;
+}
+
+/* Button */
+
+.login-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #111;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #f2b84b;
+    color: #111;
+}
+
+/* Message */
+
+#message {
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Register Link */
+
+.register-link {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+.register-link a {
+    color: #c28b28;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Back */
+
+.back-home {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.back-home:hover {
+    color: #c28b28;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .login-card h1 {
+        font-size: 24px;
+    }
+}

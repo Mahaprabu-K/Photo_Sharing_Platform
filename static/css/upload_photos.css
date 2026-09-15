@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+/* Main Heading */
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #d99a2b;
+    margin: 14px auto 0;
+    border-radius: 5px;
+}
+
+
+/* Event Name */
+
+#eventName {
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+
+/* Upload Form */
+
+#uploadForm {
+    width: 100%;
+    max-width: 650px;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* File Input */
+
+#photoFiles {
+    width: 100%;
+
+    padding: 18px;
+
+    border: 2px dashed #d5d5d5;
+
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    font-size: 14px;
+
+    color: #555;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#photoFiles:hover {
+    border-color: #d99a2b;
+    background: #fffaf0;
+}
+
+
+/* Upload Button */
+
+button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #111;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d99a2b;
+    color: #111;
+}
+
+
+/* Message */
+
+#message {
+    margin-top: 22px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* Dashboard Link */
+
+a {
+    margin-top: 25px;
+
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #d99a2b;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #uploadForm {
+        padding: 25px;
+    }
+
+    #photoFiles {
+        font-size: 13px;
+    }
+}

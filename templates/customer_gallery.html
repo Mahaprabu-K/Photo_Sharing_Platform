@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photo Gallery - Platform</title>
+
+    <link rel="stylesheet" href="/static/css/customer_gallery.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                📷 <span>Platform</span><strong>AI</strong>
+            </div>
+
+            <div class="nav-right">
+                <span>Your Moments</span>
+                <span class="divider">|</span>
+                <span>Our Passion</span>
+            </div>
+
+        </nav>
+
+        <div class="hero-content">
+
+            <p class="small-title">PHOTO GALLERY</p>
+
+            <h1>
+                Relive Your
+                <span>Special</span>
+                Moments
+            </h1>
+
+            <p class="hero-text">
+                Enter the PIN provided to you to view this gallery.
+            </p>
+
+            <div class="pin-card">
+
+                <div class="pin-input-wrapper">
+
+                    <span class="lock-icon">🔒</span>
+
+                    <input
+                        type="password"
+                        id="galleryPin"
+                        placeholder="Enter Gallery PIN"
+                    >
+
+                </div>
+
+                <button id="viewGalleryButton">
+                    <span>→</span>
+                    View Gallery
+                </button>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section">
+
+        <div class="gallery-header">
+
+            <div>
+                <h2>▧ Gallery Preview</h2>
+
+                <p>
+                    Beautiful moments, captured forever.
+                </p>
+            </div>
+
+            <div class="event-info">
+
+                <span>▧</span>
+
+                <div>
+                    <small>Event Gallery</small>
+                    <strong>Photography Gallery</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="photoList">
+
+            <div class="empty-message">
+                <p>Enter PIN to view photos.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="/static/js/customer_gallery.js"></script>
+
+</body>
+
+</html>

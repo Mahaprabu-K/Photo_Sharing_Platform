@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Event - Platform</title>
+
+    <link rel="stylesheet" href="/static/css/create_event.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="topbar">
+
+            <div class="brand">
+                📷 <span>Platform</span><strong>AI</strong>
+            </div>
+
+            <a href="/admin" class="back-btn">
+                ← Dashboard
+            </a>
+
+        </header>
+
+
+        <main class="content">
+
+            <div class="form-container">
+
+                <div class="form-header">
+
+                    <p>EVENT MANAGEMENT</p>
+
+                    <h1>Create New Event</h1>
+
+                    <span>
+                        Create a photography event and start managing
+                        your team and photos.
+                    </span>
+
+                </div>
+
+
+                <form method="POST">
+
+                    <div class="field">
+
+                        <label for="event_name">
+                            Event Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="event_name"
+                            name="event_name"
+                            placeholder="Enter event name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            placeholder="Enter event description"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="create-btn">
+                        Create Event
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+    <script src="../static/js/create_event.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Photos - Photo Sharing Platform</title>
+
+    <link rel="stylesheet" href="/static/css/admin_photos.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="brand">
+                📷 <span>Platform</span><strong>AI</strong>
+            </div>
+
+            <a href="/admin" class="back-btn">
+                ← Dashboard
+            </a>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <div class="photos-container">
+
+                <div class="page-header">
+
+                    <p>PHOTO MANAGEMENT</p>
+
+                    <h1>Review Event Photos</h1>
+
+                    <span>
+                        Review uploaded photos and select the
+                        best moments for the customer gallery.
+                    </span>
+
+                </div>
+
+
+                <!-- EVENT SELECT -->
+                <div class="event-controls">
+
+                    <div class="field">
+
+                        <label for="eventSelect">
+                            Select Event
+                        </label>
+
+                        <select id="eventSelect">
+
+                            <option value="">
+                                Loading events...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button id="viewButton" class="view-btn">
+                        View Photos
+                    </button>
+
+                    <button
+                        id="saveSelectionButton"
+                        class="save-btn"
+                    >
+                        Save Selection
+                    </button>
+
+                </div>
+
+
+                <!-- PHOTO LIST -->
+                <div id="photoList">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            🖼️
+                        </div>
+
+                        <h3>Select an event</h3>
+
+                        <p>
+                            Choose an event above to view
+                            uploaded photos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="/static/js/admin_photos.js"></script>
+
+</body>
+
+</html>

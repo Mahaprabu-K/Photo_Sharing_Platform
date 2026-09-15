@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Gallery | Platform</title>
+
+    <link rel="stylesheet" href="/static/css/create_gallery.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            PlatformAI
+        </div>
+
+        <a href="/admin" class="back-btn">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="page-container">
+
+        <section class="page-header">
+
+            <span class="eyebrow">
+                CUSTOMER GALLERY
+            </span>
+
+            <h1>Create Gallery</h1>
+
+            <p>
+                Create a secure customer gallery from your selected event photos.
+            </p>
+
+        </section>
+
+
+        <!-- Gallery Creation -->
+
+        <section class="gallery-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Gallery Details</h2>
+
+                    <p>
+                        Select an event and protect the gallery with a PIN.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="eventSelect">
+                    Select Event
+                </label>
+
+                <select id="eventSelect">
+
+                    <option value="">
+                        Select Event
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="pinInput">
+                    Gallery PIN
+                </label>
+
+                <input
+                    type="text"
+                    id="pinInput"
+                    placeholder="Enter 4-6 digit PIN"
+                    maxlength="6"
+                >
+
+            </div>
+
+
+            <button
+                id="createGalleryButton"
+                class="create-btn"
+            >
+                Create Gallery
+            </button>
+
+
+            <div id="message" class="message"></div>
+
+
+            <!-- Operational State -->
+
+            <div
+                id="operationalState"
+                class="operational-state"
+                style="display: none;"
+            >
+
+                <div class="state-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            OPERATIONAL STATE
+                        </span>
+
+                        <h2>Gallery Overview</h2>
+
+                    </div>
+
+                    <span
+                        id="galleryStatus"
+                        class="status-badge"
+                    >
+                        Not Published
+                    </span>
+
+                </div>
+
+
+                <div class="state-grid">
+
+
+                    <div class="state-item">
+
+                        <span class="state-label">
+                            Event Name
+                        </span>
+
+                        <strong id="stateEventName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="state-item">
+
+                        <span class="state-label">
+                            Total Uploaded Photos
+                        </span>
+
+                        <strong id="totalPhotos">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="state-item">
+
+                        <span class="state-label">
+                            Selected for Publishing
+                        </span>
+
+                        <strong id="selectedPhotos">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="state-item">
+
+                        <span class="state-label">
+                            Gallery ID
+                        </span>
+
+                        <strong id="galleryId">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="state-item">
+
+                        <span class="state-label">
+                            Access PIN
+                        </span>
+
+                        <strong id="accessPin">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Gallery URL -->
+
+                <div class="gallery-link-section">
+
+                    <span class="state-label">
+                        Gallery URL
+                    </span>
+
+                    <div class="link-box">
+
+                        <input
+                            type="text"
+                            id="galleryLink"
+                            readonly
+                        >
+
+                        <button
+                            id="copyLinkButton"
+                            type="button"
+                        >
+                            Copy Link
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Publish -->
+
+                <button
+                    id="publishGalleryButton"
+                    class="publish-btn"
+                >
+                    Publish Gallery
+                </button>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/static/js/create_gallery.js"></script>
+
+</body>
+</html>

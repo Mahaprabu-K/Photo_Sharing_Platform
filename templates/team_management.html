@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Management - PlatformAI</title>
+
+    <link rel="stylesheet" href="/static/css/team_management.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="brand">
+                📷 <span>Platform</span><strong>AI</strong>
+            </div>
+
+            <a href="/admin" class="back-btn">
+                ← Dashboard
+            </a>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <div class="management-container">
+
+                <div class="page-header">
+
+                    <p>TEAM MANAGEMENT</p>
+
+                    <h1>Assign Team Members</h1>
+
+                    <span>
+                        Assign photographers and team members
+                        to your photography events.
+                    </span>
+
+                </div>
+
+
+                <!-- EVENT -->
+                <div class="field">
+
+                    <label for="eventSelect">
+                        Select Event
+                    </label>
+
+                    <select id="eventSelect">
+
+                        <option value="">
+                            Loading events...
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MEMBER -->
+                <div class="field">
+
+                    <label for="memberSelect">
+                        Select Team Member
+                    </label>
+
+                    <select id="memberSelect">
+
+                        <option value="">
+                            Loading team members...
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ASSIGN -->
+                <button id="assignButton" class="assign-btn">
+
+                    Assign Member
+
+                    <span>→</span>
+
+                </button>
+
+
+                <!-- MESSAGE -->
+                <div id="message" class="message"></div>
+
+
+                <!-- INFO -->
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <h3>Team Assignment</h3>
+
+                        <p>
+                            Select an event and a team member
+                            to give them access to upload photos
+                            for that event.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="/static/js/team_management.js"></script>
+
+</body>
+
+</html>

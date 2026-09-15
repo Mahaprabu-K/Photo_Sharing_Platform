@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #080d10;
+    color: #ffffff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(5, 10, 13, 0.82),
+            rgba(5, 10, 13, 0.88)
+        ),
+        url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 90px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.logo strong {
+    color: #f2b84b;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #eeeeee;
+}
+
+.nav-right span:last-child {
+    color: #f2b84b;
+}
+
+.divider {
+    color: #777;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    text-align: center;
+    padding: 45px 20px 70px;
+}
+
+.small-title {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 6px;
+    color: #d8d8d8;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-size: clamp(40px, 5vw, 68px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #f2b84b;
+}
+
+.hero-text {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #dddddd;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   PIN CARD
+========================= */
+
+.pin-card {
+    width: min(610px, 90%);
+    margin: auto;
+
+    padding: 18px;
+
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    background: rgba(30, 42, 47, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.pin-input-wrapper {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 30px;
+
+    padding: 0 18px;
+}
+
+.lock-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.pin-input-wrapper input {
+    width: 100%;
+
+    padding: 14px 5px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+.pin-input-wrapper input::placeholder {
+    color: #aeb5b8;
+}
+
+.pin-card button {
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    background: #f2b84b;
+    color: #111;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.pin-card button span {
+    font-size: 22px;
+    margin-right: 7px;
+}
+
+.pin-card button:hover {
+    transform: translateY(-2px);
+    background: #ffc967;
+}
+
+#message {
+    margin-top: 18px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    color: #f2b84b;
+}
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section {
+    padding: 55px 5% 80px;
+
+    background: #080d10;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.gallery-header h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.gallery-header p {
+    font-family: Arial, sans-serif;
+
+    margin-top: 8px;
+
+    color: #8e999d;
+    font-size: 15px;
+}
+
+.event-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.event-info > span {
+    font-size: 25px;
+    color: #aaa;
+}
+
+.event-info small {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    color: #8e999d;
+    margin-bottom: 5px;
+}
+
+.event-info strong {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: white;
+}
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+#photoList {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.photo-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #11181c;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.35s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card img {
+    display: block;
+
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+.photo-card p {
+    padding: 12px;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    border: 1px dashed #384247;
+
+    border-radius: 12px;
+
+    color: #858f93;
+
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    #photoList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-header {
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .hero-content {
+        padding-top: 55px;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .pin-card {
+        flex-direction: column;
+
+        padding: 15px;
+    }
+
+    .pin-input-wrapper {
+        width: 100%;
+    }
+
+    .pin-card button {
+        width: 100%;
+    }
+
+    .gallery-section {
+        padding: 40px 20px 60px;
+    }
+
+    .gallery-header {
+        flex-direction: column;
+    }
+
+    .gallery-header h2 {
+        font-size: 27px;
+    }
+
+    .event-info {
+        align-self: flex-start;
+    }
+
+    #photoList {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 300px;
+    }
+}
+
+
+
+.gallery-photo {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-photo:hover {
+    transform: scale(1.02);
+}
+
+
+/* Photo Viewer */
+
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 30px;
+}
+
+.viewer-content {
+    position: relative;
+
+    max-width: 95vw;
+    max-height: 95vh;
+
+    text-align: center;
+}
+
+.viewer-content img {
+    max-width: 90vw;
+    max-height: 82vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+.viewer-content p {
+    color: white;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+
+/* Close Button */
+
+.close-viewer {
+    position: absolute;
+
+    top: -15px;
+    right: -15px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: #111;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.close-viewer:hover {
+    background: #f2b84b;
+}
+
+
+
+
+.download-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+
+    background: #f2b84b;
+    color: #111;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #111;
+    color: #fff;
+}

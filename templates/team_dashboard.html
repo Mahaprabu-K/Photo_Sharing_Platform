@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Dashboard - PlatformAI</title>
+
+    <link rel="stylesheet" href="/static/css/team_dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                📷 <span>Platform</span><strong>AI</strong>
+            </div>
+
+            <p class="menu-title">TEAM PANEL</p>
+
+            <a href="/team" class="menu-item active">
+                🏠 Dashboard
+            </a>
+
+            <a href="/team" class="menu-item">
+                📅 My Events
+            </a>
+
+            <div class="sidebar-bottom">
+
+                <a href="/logout" class="logout">
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="welcome-small">Welcome back</p>
+
+                    <h1 id="userName">
+                        Loading...
+                    </h1>
+                </div>
+
+                <div class="profile">
+
+                    <div class="profile-icon">
+                        👤
+                    </div>
+
+                    <div>
+                        <span>Account</span>
+
+                        <strong id="userRole">
+                            Loading...
+                        </strong>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- HERO -->
+            <section class="hero-card">
+
+                <div>
+
+                    <p class="hero-label">
+                        PHOTOGRAPHY TEAM
+                    </p>
+
+                    <h2>
+                        Capture moments.
+                        <span>Upload memories.</span>
+                    </h2>
+
+                    <p>
+                        View your assigned events and upload
+                        photos directly to the photography platform.
+                    </p>
+
+                </div>
+
+                <div class="camera-icon">
+                    📸
+                </div>
+
+            </section>
+
+
+            <!-- EVENTS -->
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>My Assigned Events</h2>
+
+                        <p>
+                            Events assigned to you by the admin
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div id="eventList">
+
+                    <div class="loading-card">
+                        Loading events...
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="/static/js/team_dashboard.js"></script>
+
+</body>
+
+</html>
