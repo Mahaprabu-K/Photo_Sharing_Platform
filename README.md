@@ -161,7 +161,7 @@ Open the application in your browser:
 
 http://127.0.0.1:5000
 
- **Important:** `<your-github-repository-url>` இடத்தில் உங்க actual GitHub URL-ஐ later replace பண்ணலாம்.
+[ **Important:** `<your-github-repository-url>`](https://github.com/Mahaprabu-K/Photo_Sharing_Platform) 
 
 
  ## Security
@@ -286,3 +286,38 @@ Before deployment:
 - Cloud deployment configuration may vary depending on the hosting provider.
 - Advanced features such as photo download, gallery expiration, and CDN
   optimization are not currently implemented.
+
+
+
+
+
+## Demo Credentials
+
+### Admin
+
+Email: demo-admin@example.com
+
+Password: <demo-password>
+
+### Team Member
+
+Email: demo-team@example.com
+
+Password: <demo-password>
+
+### Customer Gallery
+
+Gallery URL: <demo-gallery-url>
+
+Access PIN: <demo-gallery-pin>
+
+> Demo credentials should be used only for testing and demonstration.
+> Never commit real passwords, API keys, or other secrets to GitHub.
+
+
+## License
+
+This project was developed as part of the TrizenAI Full Stack Internship
+Challenge.
+
+The project is intended for educational and demonstration purposes.
