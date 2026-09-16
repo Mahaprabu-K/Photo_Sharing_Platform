@@ -174,7 +174,7 @@ def login():
                     FullName,
                     Role,
                     PasswordHash
-                FROM Users
+                FROM users
                 WHERE Email = %s
             """, (Email,))
 
