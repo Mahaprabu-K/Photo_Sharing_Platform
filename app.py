@@ -637,6 +637,8 @@ def get_team_members():
 
     try:
 
+        admin_id = session["user_id"]
+
         cursor.execute("""
             SELECT
                 UserID,
@@ -644,8 +646,9 @@ def get_team_members():
                 Email
             FROM Users
             WHERE Role = 'Team Member'
+            AND AdminID = %s
             ORDER BY FullName
-        """)
+        """, (admin_id,))
 
         rows = cursor.fetchall()
 
