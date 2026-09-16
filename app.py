@@ -7,7 +7,7 @@ import cloudinary.uploader
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 from config import (
-   DATABASE_URL ,
+    DATABASE_URL ,
     CLOUDINARY_CLOUD_NAME,
     CLOUDINARY_API_KEY,
     CLOUDINARY_API_SECRET
@@ -37,7 +37,9 @@ app.secret_key = "photo-secret-key"
 # --------------------------------------------------
 
 def get_db_connection():
-    return psycopg2.connect(DATABASE_URL)
+    conn = psycopg2.connect(DATABASE_URL)
+    print("CONNECTED DATABASE:", conn.info.dbname)
+    return conn
 
 
 # --------------------------------------------------
