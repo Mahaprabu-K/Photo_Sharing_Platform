@@ -4,6 +4,5 @@ venv/
 .venv/
 env/
 .env
-config.py
 *.log
 instance/
