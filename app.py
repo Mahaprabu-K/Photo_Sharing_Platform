@@ -39,25 +39,37 @@ app.secret_key = "photo-secret-key"
 def get_db_connection():
     conn = psycopg2.connect(DATABASE_URL)
 
-    cursor = conn.cursor()
-    cursor.execute("SELECT current_database(), current_schema()")
-    result = cursor.fetchone()
+    print("DATABASE:", conn.info.dbname)
+    print("HOST:", conn.info.host)
+    print("PORT:", conn.info.port)
 
-    print("DATABASE:", result[0])
-    print("SCHEMA:", result[1])
+    cursor = conn.cursor()
 
     cursor.execute("""
-        SELECT EXISTS (
-            SELECT 1
-            FROM information_schema.tables
-            WHERE table_schema = 'public'
-            AND table_name = 'users'
-        )
+        SELECT
+            current_database(),
+            current_schema(),
+            inet_server_addr(),
+            inet_server_port()
     """)
 
-    print("USERS TABLE EXISTS:", cursor.fetchone()[0])
+    result = cursor.fetchone()
+
+    print("DB INFO:", result)
+
+    cursor.execute("""
+        SELECT table_schema, table_name
+        FROM information_schema.tables
+        WHERE table_schema = 'public'
+        ORDER BY table_name
+    """)
+
+    tables = cursor.fetchall()
+
+    print("TABLES:", tables)
 
     cursor.close()
+
     return conn
 
 
