@@ -137,11 +137,15 @@ def register():
         )
         Role = request.form["role"]
 
+        # Admin Email only for Team Member
+        AdminEmail = request.form.get("admin_email")
+
         db = get_db_connection()
         cursor = db.cursor()
 
         try:
 
+            # Check existing email
             cursor.execute("""
                 SELECT UserID
                 FROM Users
@@ -153,20 +157,57 @@ def register():
             if existing_user:
                 return "Email already exists!"
 
+
+            # Team Member registration
+            if Role == "Team Member":
+
+                if not AdminEmail:
+                    return "Admin email is required"
+
+                # Find Admin using email
+                cursor.execute("""
+                    SELECT UserID
+                    FROM Users
+                    WHERE Email = %s
+                    AND Role = 'Admin'
+                """, (AdminEmail,))
+
+                admin = cursor.fetchone()
+
+                if not admin:
+                    return "Admin email not found"
+
+                AdminID = admin[0]
+
+            else:
+
+                # Admin account
+                AdminID = None
+
+
+            # Insert user
             cursor.execute("""
                 INSERT INTO Users
-                (FullName, Email, PasswordHash, Role)
-                VALUES (%s, %s, %s, %s)
+                (
+                    FullName,
+                    Email,
+                    PasswordHash,
+                    Role,
+                    AdminID
+                )
+                VALUES (%s, %s, %s, %s, %s)
             """, (
                 FullName,
                 Email,
                 PasswordHash,
-                Role
+                Role,
+                AdminID
             ))
 
             db.commit()
 
             return "Registration Successful"
+
 
         except psycopg2.IntegrityError:
 
@@ -174,13 +215,23 @@ def register():
 
             return "Email already exists!"
 
+
+        except Exception as e:
+
+            db.rollback()
+
+            print("REGISTER ERROR:", e)
+
+            return "Registration failed!"
+
+
         finally:
 
             cursor.close()
             db.close()
 
-    return render_template("register.html")
 
+    return render_template("register.html")
 
 # --------------------------------------------------
 # LOGIN
