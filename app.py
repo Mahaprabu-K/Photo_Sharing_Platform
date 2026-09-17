@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, redirect, session, jsonify,Response
+from flask import Flask, render_template, request, redirect, session, jsonify
 import psycopg2
 import psycopg2.errors
 import os
-import requests
 import cloudinary
 import cloudinary.uploader
 from werkzeug.utils import secure_filename
@@ -1806,52 +1805,3 @@ if __name__ == "__main__":
     app.run(
         debug=True
     )
-
-
-@app.route("/api/download-photo/<int:photo_id>")
-def download_photo(photo_id):
-
-    db = get_db_connection()
-    cursor = db.cursor()
-
-    try:
-
-        cursor.execute("""
-            SELECT Filename, StorageLocation
-            FROM Photos
-            WHERE PhotoID = %s
-        """, (photo_id,))
-
-        photo = cursor.fetchone()
-
-        if not photo:
-            return jsonify({
-                "error": "Photo not found"
-            }), 404
-
-        filename = photo[0]
-        image_url = photo[1]
-
-        response = requests.get(image_url)
-
-        if response.status_code != 200:
-            return jsonify({
-                "error": "Unable to download photo"
-            }), 500
-
-        return Response(
-            response.content,
-            mimetype=response.headers.get(
-                "Content-Type",
-                "image/jpeg"
-            ),
-            headers={
-                "Content-Disposition":
-                    f'attachment; filename="{filename}"'
-            }
-        )
-
-    finally:
-
-        cursor.close()
-        db.close()
