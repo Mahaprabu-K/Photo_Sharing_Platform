@@ -93,6 +93,9 @@ function loadGalleryPhotos(galleryId) {
                     <p>
                         <strong>${photo.filename}</strong>
                     </p>
+                    <button class="download-btn">
+    ⬇ Download
+</button>
                 `;
 
                 // Click photo → open large view
@@ -183,3 +186,15 @@ function openPhotoViewer(imageUrl, filename) {
 
 }
 
+
+const downloadButton =
+    photoCard.querySelector(".download-btn");
+
+downloadButton.addEventListener("click", function (event) {
+
+    event.stopPropagation();
+
+    window.location.href =
+        "/api/download-photo/" + photo.photo_id;
+
+});
